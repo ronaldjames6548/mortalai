@@ -85,7 +85,6 @@ export default function Index(){
             <Blogs/>
         </section>
         <Footer/>
-        <Switcher/>
         </>
     )
 }
