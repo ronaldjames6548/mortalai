@@ -26,10 +26,10 @@ export default function Switcher(){
     function changeMode(mode, event) {
         switch (mode) {
             case 'mode':
-                if (document.documentElement.className.includes("dark")) {
-                    document.documentElement.className = 'light'
-                } else {
+                if (document.documentElement.className.includes("light")) {
                     document.documentElement.className = 'dark'
+                } else {
+                    document.documentElement.className = 'light'
                 }
                 break;
             case 'layout':
