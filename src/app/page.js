@@ -11,7 +11,6 @@ import TikTokInput from "./components/TikTokInput"; // Correct path
 const Navbar = dynamic(() => import('./components/navbar'))
 const BrandLogo = dynamic(() => import('./components/brandLogo'))
 const Features = dynamic(() => import('./components/features'))
-const Switcher = dynamic(() => import('./components/switcher'))
 const AboutOne = dynamic(() => import('./components/aboutOne'))
 const AboutTwo = dynamic(() => import('./components/aboutTwo'))
 const AmazingFeatures = dynamic(() => import('./components/amazingFeatures'))
@@ -24,11 +23,7 @@ const Footer = dynamic(() => import('./components/footer'))
 
 import { TypeAnimation } from 'react-type-animation';
 export default function Index(){
-    useEffect(() => {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.classList.add('dark');
-        document.documentElement.classList.remove('light');
-      }, []);
+    
 
     return(
         <>
@@ -95,7 +90,6 @@ export default function Index(){
             <Blogs/>
         </section>
         <Footer/>
-        <Switcher/>
         </>
     )
 }
