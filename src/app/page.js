@@ -1,34 +1,34 @@
-"use client"
+'use client'
 import React,{useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-const Navbar = dynamic(() => import('./components/navbar'))
-const BrandLogo = dynamic(() => import('./components/brandLogo'))
-const Features = dynamic(() => import('./components/features'))
-const Switcher = dynamic(() => import('./components/switcher'))
-const AboutOne = dynamic(() => import('./components/aboutOne'))
-const AboutTwo = dynamic(() => import('./components/aboutTwo'))
-const AmazingFeatures = dynamic(() => import('./components/amazingFeatures'))
-const AboutThree = dynamic(() => import('./components/aboutThree'))
-const Pricing = dynamic(() => import('./components/pricing'))
-const Faq = dynamic(() => import('./components/Faq'))
-const Blogs = dynamic(() => import('./components/blogs'))
-const Footer = dynamic(() => import('./components/footer'))
-
+const Navbar = dynamic(() => import('../components/navbar'))
+const BrandLogo = dynamic(() => import('../components/brandLogo'))
+const Features = dynamic(() => import('../components/features'))
+const Switcher = dynamic(() => import('../components/switcher'))
+const AboutOne = dynamic(() => import('../components/aboutOne'))
+const AboutTwo = dynamic(() => import('../components/aboutTwo'))
+const AmazingFeatures = dynamic(() => import('../components/amazingFeatures'))
+const AboutThree = dynamic(() => import('../components/aboutThree'))
+const Pricing = dynamic(() => import('../components/pricing'))
+const Faq = dynamic(() => import('../components/Faq'))
+const Blogs = dynamic(() => import('../components/blogs'))
+const Footer = dynamic(() => import('../components/footer'))
 
 import { TypeAnimation } from 'react-type-animation';
-export default function Index(){
+
+export default function IndexLight(){
     useEffect(() => {
         document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.classList.add('dark');
-        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
       }, []);
 
     return(
         <>
-       <Navbar/>
+        <Navbar/>
         <section className="relative overflow-hidden pt-48 after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-[56rem] after:h-[56rem] after:bg-gradient-to-tl after:to-amber-400/30  after:from-fuchsia-600/30 dark:after:to-amber-400/50 dark:after:from-fuchsia-600/50 after:blur-[200px] after:rounded-full after:-z-1">
             <div className="container relative z-2">
                 <div className="grid grid-cols-1 text-center">
@@ -68,15 +68,15 @@ export default function Index(){
         </section>
 
         <section className="pt-6">
-          <BrandLogo/>
+           <BrandLogo/>
         </section>
 
         <section className="relative md:py-24 py-16">
-          <Features classlist="container relative"/>
-          <AboutOne/>
-          <AboutTwo/>
-          <AmazingFeatures/>
-          <AboutThree/>
+            <Features classlist="container relative"/>
+            <AboutOne/>
+            <AboutTwo/>
+            <AmazingFeatures/>
+            <AboutThree/>
 
             <div className="container relative md:mt-24 mt-16">
                 <div className="grid grid-cols-1 pb-6 text-center">
@@ -86,6 +86,7 @@ export default function Index(){
                 </div>
                 <Pricing/>
             </div>
+
             <Faq/>
             <Blogs/>
         </section>
