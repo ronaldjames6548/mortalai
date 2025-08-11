@@ -1,4 +1,6 @@
 // src/app/components/TikTokInput.js
+"use client";
+
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
