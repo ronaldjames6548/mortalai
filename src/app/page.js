@@ -22,8 +22,9 @@ import { TypeAnimation } from 'react-type-animation';
 export default function Index(){
     useEffect(() => {
         document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.classList.remove('light');
         document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+
       }, []);
 
     return(
