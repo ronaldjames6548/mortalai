@@ -26,7 +26,67 @@
     "professionalPrice": "$40 por mes",
     "faq": "¿Tienes una pregunta?",
     "contactUs": "Contáctanos",
-    "latestNews": "Últimas Noticias"
+    "latestNews": "Últimas Noticias",
+	"aiContentPlatformFor": "Plataforma de Contenido de IA para ",
+    "videos": "Videos",
+    "modernTeams": "Equipos Modernos",
+    "socialMedia": "Redes Sociales",
+    "description": "Crea contenido atractivo sin esfuerzo con nuestras herramientas impulsadas por IA.",
+    "tryForFree": "Prueba Gratis",
+    "noCreditCard": "No se requiere tarjeta de crédito",
+    "rightPlansForRightPrice": "Los Planes Correctos por el Precio Correcto"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "workSmarter": "Trabaja de manera más inteligente",
+    "byUsingAI": "usando IA, no manualmente",
+    "description": "Por lo general, nuestros colegas no saltan de emoción cuando escuchan sobre e-learning, pero los videos de IA creados con Mortal.Ai han generado una motivación que no habíamos visto antes.",
+    "feature1": "Soluciones de Marketing Digital para el Mañana",
+    "feature2": "Nuestra Agencia de Marketing Talentosa y Experimentada",
+    "feature3": "Crea tu propio diseño para que coincida con tu marca",
+    "readMore": "Leer Más",
+    "tabs": {
+      "dragAndDrop": {
+        "title": "Arrastrar y Soltar",
+        "description": "La inteligencia artificial hace que sea rápido y fácil crear contenido para tus creaciones de video."
+      },
+      "improveTalent": {
+        "title": "Mejora tu Talento",
+        "description": "La inteligencia artificial hace que sea rápido y fácil crear contenido para tus creaciones de video."
+      },
+      "goLive": {
+        "title": "Ir en Vivo",
+        "description": "La inteligencia artificial hace que sea rápido y fácil crear contenido para tus creaciones de video."
+      }
+    },
+    "team": {
+      "title": "El Equipo",
+      "description": "¡La inteligencia artificial hace que sea rápido y fácil crear contenido para tu blog, redes sociales, sitio web y más!",
+      "calvinCarlo": {
+        "name": "Calvin Carlo",
+        "title": "C.E.O"
+      },
+      "alianaRosy": {
+        "name": "Aliana Rosy",
+        "title": "Cofundadora"
+      },
+      "sofiaRazaq": {
+        "name": "Sofia Razaq",
+        "title": "C.O.O."
+      },
+      "ronnyJofra": {
+        "name": "Ronny Jofra",
+        "title": "Director"
+      },
+      "cristinaMurphy": {
+        "name": "Cristina Murphy",
+        "title": "Gerente"
+      },
+      "jimmiShaa": {
+        "name": "Jimmi Shaa",
+        "title": "Operador"
+      }
+    }
   },
   "navbar": {
     "home": "Inicio",
@@ -62,5 +122,11 @@
     "en": "English",
     "es": "Español",
     "fr": "Français"
+  },
+  "clients": {
+    "title": "Nuestros Clientes"
+  },
+  "blogs": {
+    "title": "Últimos Blogs"
   }
 }

@@ -26,7 +26,67 @@
     "professionalPrice": "40 $ par mois",
     "faq": "Vous avez une question ?",
     "contactUs": "Contactez-nous",
-    "latestNews": "Dernières actualités"
+    "latestNews": "Dernières actualités",
+	"aiContentPlatformFor": "Plateforme de Contenu IA pour ",
+    "videos": "Vidéos",
+    "modernTeams": "Équipes Modernes",
+    "socialMedia": "Réseaux Sociaux",
+    "description": "Créez du contenu engageant sans effort avec nos outils alimentés par IA.",
+    "tryForFree": "Essayer Gratuitement",
+    "noCreditCard": "Aucune carte de crédit requise",
+    "rightPlansForRightPrice": "Les Bons Plans pour le Bon Prix"
+  },
+  "about": {
+    "title": "À Propos",
+    "workSmarter": "Travaillez plus intelligemment",
+    "byUsingAI": "en utilisant l'IA, pas manuellement",
+    "description": "Habituellement, nos collègues ne sautent pas de joie lorsqu'ils entendent parler d'e-learning, mais les vidéos IA créées avec Mortal.Ai ont suscité une motivation que nous n'avions jamais vue auparavant.",
+    "feature1": "Solutions de Marketing Numérique pour Demain",
+    "feature2": "Notre Agence de Marketing Talentueuse et Expérimentée",
+    "feature3": "Créez votre propre design pour correspondre à votre marque",
+    "readMore": "En savoir plus",
+    "tabs": {
+      "dragAndDrop": {
+        "title": "Glisser-Déposer",
+        "description": "L'intelligence artificielle rend la création de contenu pour vos créations vidéo rapide et facile."
+      },
+      "improveTalent": {
+        "title": "Améliorez votre Talent",
+        "description": "L'intelligence artificielle rend la création de contenu pour vos créations vidéo rapide et facile."
+      },
+      "goLive": {
+        "title": "Passer en Direct",
+        "description": "L'intelligence artificielle rend la création de contenu pour vos créations vidéo rapide et facile."
+      }
+    },
+    "team": {
+      "title": "L'Équipe",
+      "description": "L'intelligence artificielle rend la création de contenu pour votre blog, réseaux sociaux, site web et plus encore rapide et facile !",
+      "calvinCarlo": {
+        "name": "Calvin Carlo",
+        "title": "P.D.G"
+      },
+      "alianaRosy": {
+        "name": "Aliana Rosy",
+        "title": "Cofondatrice"
+      },
+      "sofiaRazaq": {
+        "name": "Sofia Razaq",
+        "title": "Directrice des Opérations"
+      },
+      "ronnyJofra": {
+        "name": "Ronny Jofra",
+        "title": "Directeur"
+      },
+      "cristinaMurphy": {
+        "name": "Cristina Murphy",
+        "title": "Manager"
+      },
+      "jimmiShaa": {
+        "name": "Jimmi Shaa",
+        "title": "Opérateur"
+      }
+    }
   },
   "navbar": {
     "home": "Accueil",
@@ -62,5 +122,11 @@
     "en": "English",
     "es": "Español",
     "fr": "Français"
+  },
+  "clients": {
+    "title": "Nos Clients"
+  },
+  "blogs": {
+    "title": "Derniers Blogs"
   }
 }

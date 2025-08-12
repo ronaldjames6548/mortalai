@@ -26,7 +26,67 @@
     "professionalPrice": "$40 per month",
     "faq": "Have a question?",
     "contactUs": "Contact Us",
-    "latestNews": "Latest News"
+    "latestNews": "Latest News",
+	"aiContentPlatformFor": "AI Content Platform for ",
+    "videos": "Videos",
+    "modernTeams": "Modern Teams",
+    "socialMedia": "Social Media",
+    "description": "Create engaging content effortlessly with our AI-powered tools.",
+    "tryForFree": "Try for Free",
+    "noCreditCard": "No credit card required",
+    "rightPlansForRightPrice": "The Right Plans for the Right Price"
+  },
+  "about": {
+    "title": "About Us",
+    "workSmarter": "Work smarter",
+    "byUsingAI": "by using AI, not manually",
+    "description": "Usually, our colleagues don't jump in the air when they hear e-learning, but the AI videos created with Mortal.Ai have sparked motivation that we haven't seen before.",
+    "feature1": "Digital Marketing Solutions for Tomorrow",
+    "feature2": "Our Talented & Experienced Marketing Agency",
+    "feature3": "Create your own skin to match your brand",
+    "readMore": "Read More",
+    "tabs": {
+      "dragAndDrop": {
+        "title": "Drag and Drop",
+        "description": "Artificial intelligence makes it fast and easy to create content for your video creations."
+      },
+      "improveTalent": {
+        "title": "Improve your Talent",
+        "description": "Artificial intelligence makes it fast and easy to create content for your video creations."
+      },
+      "goLive": {
+        "title": "Go for Live",
+        "description": "Artificial intelligence makes it fast and easy to create content for your video creations."
+      }
+    },
+    "team": {
+      "title": "The Team",
+      "description": "Artificial intelligence makes it fast and easy to create content for your blog, social media, website, and more!",
+      "calvinCarlo": {
+        "name": "Calvin Carlo",
+        "title": "C.E.O"
+      },
+      "alianaRosy": {
+        "name": "Aliana Rosy",
+        "title": "Co-founder"
+      },
+      "sofiaRazaq": {
+        "name": "Sofia Razaq",
+        "title": "C.O.O."
+      },
+      "ronnyJofra": {
+        "name": "Ronny Jofra",
+        "title": "Director"
+      },
+      "cristinaMurphy": {
+        "name": "Cristina Murphy",
+        "title": "Manager"
+      },
+      "jimmiShaa": {
+        "name": "Jimmi Shaa",
+        "title": "Operator"
+      }
+    }
   },
   "navbar": {
     "home": "Home",
@@ -62,6 +122,12 @@
     "en": "English",
     "es": "Español",
     "fr": "Français"
+  },
+  "clients": {
+    "title": "Our Clients"
+  },
+  "blogs": {
+    "title": "Latest Blogs"
   }
  
 }
