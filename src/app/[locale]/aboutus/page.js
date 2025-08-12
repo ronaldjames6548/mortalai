@@ -7,7 +7,7 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
 import ModalVideo from 'react-modal-video';
-import '../../../node_modules/react-modal-video/css/modal-video.css';
+import 'react-modal-video/css/modal-video.css'; 
 import { FiCheckCircle } from '../../assets/icons/vander';
 
 const NavLight = dynamic(() => import('../../components/navlight'));

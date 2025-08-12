@@ -1,7 +1,7 @@
 // src/app/[locale]/layout.tsx
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import '../../globals.css';
+import '../globals.css'; // Corrected to point to src/app/globals.css
 
 export default async function RootLayout({
   children,
