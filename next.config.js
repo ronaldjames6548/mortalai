@@ -1,6 +1,5 @@
-const withNextIntl = require('next-intl/plugin')(
-  './src/i18n.ts'
-);
+// next.config.js
+const withNextIntl = require('next-intl/plugin')('./src/i18n.ts');
 
 const nextConfig = {
   reactStrictMode: false,

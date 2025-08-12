@@ -1,35 +1,39 @@
-"use client"
-import React, { useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import dynamic from "next/dynamic";
-import TikTokInput from "./components/TikTokInput"; // Correct path
-import { useTranslations } from 'next-intl';
+// src/app/[locale]/page.js
+'use client';
+
+import React, { useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
+import TikTokInput from '../components/TikTokInput'; // Corrected path
+import { useTranslations, useLocale } from 'next-intl';
 import { TypeAnimation } from 'react-type-animation';
 
-const Navbar = dynamic(() => import('./components/navbar'))
-const BrandLogo = dynamic(() => import('./components/brandLogo'))
-const Features = dynamic(() => import('./components/features'))
-const AboutOne = dynamic(() => import('./components/aboutOne'))
-const AboutTwo = dynamic(() => import('./components/aboutTwo'))
-const AmazingFeatures = dynamic(() => import('./components/amazingFeatures'))
-const AboutThree = dynamic(() => import('./components/aboutThree'))
-const Pricing = dynamic(() => import('./components/pricing'))
-const Faq = dynamic(() => import('./components/Faq'))
-const Blogs = dynamic(() => import('./components/blogs'))
-const Footer = dynamic(() => import('./components/footer'))
+const Navbar = dynamic(() => import('../components/navbar'));
+const BrandLogo = dynamic(() => import('../components/brandLogo'));
+const Features = dynamic(() => import('../components/features'));
+const AboutOne = dynamic(() => import('../components/aboutOne'));
+const AboutTwo = dynamic(() => import('../components/aboutTwo'));
+const AmazingFeatures = dynamic(() => import('../components/amazingFeatures'));
+const AboutThree = dynamic(() => import('../components/aboutThree'));
+const Pricing = dynamic(() => import('../components/pricing'));
+const Faq = dynamic(() => import('../components/Faq'));
+const Blogs = dynamic(() => import('../components/blogs'));
+const Footer = dynamic(() => import('../components/footer'));
 
 export default function Index() {
   const t = useTranslations('home');
+  const locale = useLocale(); // Get current locale for Link href
 
   return (
     <>
       <Navbar />
-      <section className="relative overflow-hidden pt-48 after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-[56rem] after:h-[56rem] after:bg-gradient-to-tl after:to-amber-400/30  after:from-fuchsia-600/30 dark:after:to-amber-400/50 dark:after:from-fuchsia-600/50 after:blur-[200px] after:rounded-full after:-z-1">
+      <section className="relative overflow-hidden pt-48 after:content-[''] after:absolute after:inset-0 after:mx-auto after:w-[56rem] after:h-[56rem] after:bg-gradient-to-tl after:to-amber-400/30 after:from-fuchsia-600/30 dark:after:to-amber-400/50 dark:after:from-fuchsia-600/50 after:blur-[200px] after:rounded-full after:-z-1">
         <div className="container relative z-2">
           <div className="grid grid-cols-1 text-center">
             <div className="">
-              <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-6xl mb-5">{t('aiContentPlatformFor')}
+              <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-6xl mb-5">
+                {t('aiContentPlatformFor')}
                 <TypeAnimation
                   sequence={[
                     t('videos'),
@@ -37,7 +41,7 @@ export default function Index() {
                     t('modernTeams'),
                     1000,
                     t('socialMedia'),
-                    1000
+                    1000,
                   ]}
                   wrapper="span"
                   speed={10}
@@ -48,12 +52,25 @@ export default function Index() {
               <p className="text-slate-400 dark:text-white/60 text-lg max-w-xl mx-auto">{t('description')}</p>
               <TikTokInput />
               <div className="mt-6">
-                <Link href="" className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-amber-400 hover:bg-amber-500 border-amber-400 hover:border-amber-500 text-white rounded-md">{t('tryForFree')}</Link>
+                <Link
+                  href={`/${locale}/signup`}
+                  className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-amber-400 hover:bg-amber-500 border-amber-400 hover:border-amber-500 text-white rounded-md"
+                >
+                  {t('tryForFree')}
+                </Link>
                 <p className="text-slate-400 dark:text-white/60 text-sm mt-3">{t('noCreditCard')}</p>
               </div>
             </div>
             <div className="relative mt-8 z-3">
-              <Image src="/images/classic01.png" width={0} height={0} sizes="100vw" style={{ width: "100%", height: "auto" }} alt="" className="mover" />
+              <Image
+                src="/images/classic01.png"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+                alt=""
+                className="mover"
+              />
             </div>
           </div>
         </div>
@@ -74,7 +91,9 @@ export default function Index() {
 
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-6 text-center">
-            <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">{t('rightPlansForRightPrice')}</h3>
+            <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
+              {t('rightPlansForRightPrice')}
+            </h3>
             <p className="text-slate-400 max-w-xl mx-auto">{t('description')}</p>
           </div>
           <Pricing />
@@ -84,5 +103,5 @@ export default function Index() {
       </section>
       <Footer />
     </>
-  )
+  );
 }

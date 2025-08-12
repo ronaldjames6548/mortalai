@@ -1,7 +1,9 @@
 // src/i18n.ts
-import type { IntlConfig } from 'next-intl';
-
-export const i18n: IntlConfig = {
+const i18n = {
   defaultLocale: 'en',
-  locales: ['en', 'es', 'fr'], // Add more languages as needed (e.g., English, Spanish, French)
+  locales: ['en', 'es', 'fr'],
+  loadLocaleFrom: async (locale: string, namespace: string) =>
+    import(`./messages/${locale}.json`).then((m) => m.default),
 };
+
+export default i18n;

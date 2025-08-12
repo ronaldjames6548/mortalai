@@ -57,5 +57,10 @@
     "about": "Sobre Mortal.Ai",
     "links": "Enlaces Rápidos",
     "support": "Soporte"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français"
   }
 }
