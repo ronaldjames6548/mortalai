@@ -128,5 +128,41 @@
   },
   "blogs": {
     "title": "Últimos Blogs"
+  },
+  "blog": {
+  "blog": "Blog",
+  "category": "IA",
+  "defaultTitle": "Publicación de blog",
+  "defaultContent": "Este es el contenido de una publicación de blog.",
+  "intro": "¡Hola! Soy ChatGPT, un modelo de lenguaje desarrollado por OpenAI, basado en la potente arquitectura GPT (Generative Pre-trained Transformer).",
+  "content1": "La Inteligencia Artificial (IA) es un campo revolucionario de la informática que busca crear máquinas inteligentes capaces de realizar tareas que normalmente requieren inteligencia humana.",
+  "content2": "Al simular procesos cognitivos humanos, los sistemas de IA pueden analizar grandes cantidades de datos, identificar patrones, hacer predicciones y aprender de experiencias, lo que les permite mejorar continuamente su desempeño.",
+  "quote": "Todavía no se ha confirmado si el algoritmo de Google admite contenido generado por IA o no.",
+  "quoteAuthor": "- Mortal.Ai",
+  "content3": "Por otro lado, denunciamos con indignación justa y desagrado a aquellos hombres que están tan fascinados y desmoralizados por los placeres momentáneos.",
+  "likes": "233",
+  "comments": "08",
+  "commentsTitle": "Comentarios:",
+  "comment1": {
+    "author": "Calvin Carlo",
+    "date": "26 de agosto de 2023 a las 01:25 pm",
+    "text": "Existen muchas variaciones de pasajes de Lorem Ipsum disponibles, pero la mayoría han sufrido alteraciones de algún tipo, mediante humor agregado."
+  },
+  "comment2": {
+    "author": "Calvin Carlo",
+    "date": "26 de agosto de 2023 a las 01:25 pm",
+    "text": "Existen muchas variaciones de pasajes de Lorem Ipsum disponibles, pero la mayoría han sufrido alteraciones de algún tipo, mediante humor agregado."
+  },
+  "reply": "Responder",
+  "leaveComment": "Deja un comentario:",
+  "form": {
+    "name": "Tu nombre:",
+    "namePlaceholder": "Nombre :",
+    "email": "Tu correo electrónico:",
+    "emailPlaceholder": "Correo electrónico :",
+    "comment": "Tu comentario:",
+    "commentPlaceholder": "Mensaje :",
+    "submit": "Enviar mensaje"
   }
+}
 }

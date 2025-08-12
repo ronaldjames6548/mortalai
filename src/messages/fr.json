@@ -128,5 +128,41 @@
   },
   "blogs": {
     "title": "Derniers Blogs"
+  },
+  "blog": {
+  "blog": "Blog",
+  "category": "IA",
+  "defaultTitle": "Article de blog",
+  "defaultContent": "Ceci est le contenu d'un article de blog.",
+  "intro": "Bonjour à tous ! Je suis ChatGPT, un modèle de langage développé par OpenAI, basé sur l'architecture puissante GPT (Generative Pre-trained Transformer).",
+  "content1": "L'intelligence artificielle (IA) est un domaine révolutionnaire de l'informatique qui vise à créer des machines intelligentes capables d'effectuer des tâches nécessitant habituellement une intelligence humaine.",
+  "content2": "En simulant les processus cognitifs humains, les systèmes d'IA peuvent analyser d'énormes quantités de données, identifier des modèles, faire des prédictions et apprendre à partir de l'expérience, ce qui leur permet d'améliorer continuellement leurs performances.",
+  "quote": "Il n'est toujours pas confirmé si l'algorithme de Google prend en charge le contenu généré par l'IA ou non.",
+  "quoteAuthor": "- Mortal.Ai",
+  "content3": "D'un autre côté, nous dénonçons avec une indignation juste et du mépris les hommes qui sont tellement séduits et démoralisés par les plaisirs éphémères du moment.",
+  "likes": "233",
+  "comments": "08",
+  "commentsTitle": "Commentaires :",
+  "comment1": {
+    "author": "Calvin Carlo",
+    "date": "26 août 2023 à 13h25",
+    "text": "Il existe de nombreuses variantes de passages de Lorem Ipsum disponibles, mais la majorité ont été modifiées d'une certaine manière, par insertion d'humour."
+  },
+  "comment2": {
+    "author": "Calvin Carlo",
+    "date": "26 août 2023 à 13h25",
+    "text": "Il existe de nombreuses variantes de passages de Lorem Ipsum disponibles, mais la majorité ont été modifiées d'une certaine manière, par insertion d'humour."
+  },
+  "reply": "Répondre",
+  "leaveComment": "Laisser un commentaire :",
+  "form": {
+    "name": "Votre nom :",
+    "namePlaceholder": "Nom :",
+    "email": "Votre e-mail :",
+    "emailPlaceholder": "E-mail :",
+    "comment": "Votre commentaire :",
+    "commentPlaceholder": "Message :",
+    "submit": "Envoyer le message"
   }
+}
 }
