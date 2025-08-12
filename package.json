@@ -12,6 +12,7 @@
   "dependencies": {
     "@tobyg74/tiktok-api-dl": "^1.3.4",
     "next": "latest",
+    "next-intl": "^4.3.4",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "^4.11.0",
