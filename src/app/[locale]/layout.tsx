@@ -1,6 +1,6 @@
-import './globals.css';
+import './assets/globals.css';
+import './assets/css/tailwind.css';
 import './assets/css/materialdesignicons.min.css';
-
 import { Figtree } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 
