@@ -1,5 +1,5 @@
 const withNextIntl = require('next-intl/plugin')(
-  './src/i18n.ts'
+  './src/i18n/request.ts'
 );
 
 const nextConfig = {

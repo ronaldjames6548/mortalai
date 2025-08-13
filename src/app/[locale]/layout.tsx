@@ -3,6 +3,7 @@ import '../assets/css/tailwind.css';
 import '../assets/css/materialdesignicons.min.css';
 import { Figtree } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -15,7 +16,7 @@ export const metadata = {
   description: 'Mortal.Ai - Next Js AI Writer & Copywriting Template',
 };
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return ['en', 'es', 'fr'].map((locale) => ({ locale }));
 }
 
@@ -28,12 +29,8 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
   
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    messages = (await import(`../../messages/en.json`)).default;
-  }
+  // Providing all messages to the client side
+  const messages = await getMessages();
 
   return (
     <html lang={locale} className="dark scroll-smooth" dir="ltr">
