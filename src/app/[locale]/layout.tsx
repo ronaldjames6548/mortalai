@@ -1,6 +1,6 @@
-import './assets/globals.css';
-import './assets/css/tailwind.css';
-import './assets/css/materialdesignicons.min.css';
+import '../globals.css';
+import '../assets/css/tailwind.css';
+import '../assets/css/materialdesignicons.min.css';
 import { Figtree } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 
@@ -19,8 +19,15 @@ export async function generateStaticParams() {
   return ['en', 'es', 'fr'].map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
+export default async function RootLayout({ 
+  children, 
+  params 
+}: { 
+  children: React.ReactNode; 
+  params: Promise<{ locale: string }> 
+}) {
   const { locale } = await params;
+  
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
