@@ -1,11 +1,10 @@
-// src/app/[locale]/page.js
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import TikTokInput from '../components/TikTokInput'; // Corrected path
+import TikTokInput from '../components/TikTokInput';
 import { useTranslations, useLocale } from 'next-intl';
 import { TypeAnimation } from 'react-type-animation';
 
@@ -23,7 +22,7 @@ const Footer = dynamic(() => import('../components/footer'));
 
 export default function Index() {
   const t = useTranslations('home');
-  const locale = useLocale(); // Get current locale for Link href
+  const locale = useLocale();
 
   return (
     <>

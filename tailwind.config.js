@@ -2,9 +2,7 @@
 module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/tiktok/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}', // Kept in case src/components/ exists separately
   ],
   theme: {
     extend: {

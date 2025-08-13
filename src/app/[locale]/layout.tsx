@@ -1,10 +1,9 @@
-import './globals.css';
-import './assets/css/tailwind.css';
-import './assets/css/materialdesignicons.min.css';
+import '@/app/globals.css';
+import '@/app/assets/css/tailwind.css';
+import '@/app/assets/css/materialdesignicons.min.css';
+
 import { Figtree } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { i18n } from '../../i18n';
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -17,17 +16,17 @@ export const metadata = {
   description: 'Mortal.Ai - Next Js AI Writer & Copywriting Template',
 };
 
-export function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ locale }));
+export async function generateStaticParams() {
+  return ['en', 'es', 'fr'].map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
-  const { locale } = await params; // Await params to access locale
+  const { locale } = await params;
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
-    notFound();
+    messages = (await import(`../../messages/en.json`)).default;
   }
 
   return (
