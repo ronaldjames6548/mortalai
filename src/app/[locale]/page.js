@@ -13,6 +13,8 @@ const BrandLogo = dynamic(() => import('../components/brandLogo'));
 const Features = dynamic(() => import('../components/features'));
 const AboutOne = dynamic(() => import('../components/aboutOne'));
 const AboutTwo = dynamic(() => import('../components/aboutTwo'));
+const ClientsTwo = dynamic(() => import('../components/clientTwo'));
+
 const AmazingFeatures = dynamic(() => import('../components/amazingFeatures'));
 const AboutThree = dynamic(() => import('../components/aboutThree'));
 const Pricing = dynamic(() => import('../components/pricing'));
@@ -97,6 +99,7 @@ export default function Index() {
           </div>
           <Pricing />
         </div>
+		<ClientsTwo/>
         <Faq />
         <Blogs />
       </section>

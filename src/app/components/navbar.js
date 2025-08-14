@@ -137,15 +137,6 @@ export default function Navbar() {
             </div>
           </div>
           <ul className="buy-button list-none mb-0">
-            <li className="inline mb-0">
-              <Link href={`/${locale}/login`}>
-                <span className="py-[6px] px-4 md:inline hidden items-center justify-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400/5 hover:bg-amber-400 border border-amber-400/10 hover:border-amber-400 text-amber-400 hover:text-white font-semibold">{t('login')}</span>
-                <span className="py-[6px] px-4 inline md:hidden items-center justify-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400 hover:bg-amber-500 border border-amber-400 hover:border-amber-500 text-white font-semibold">{t('login')}</span>
-              </Link>
-            </li>
-            <li className="md:inline hidden ps-1 mb-0">
-              <Link href={`/${locale}/signup`} target="_blank" className="py-[6px] px-4 inline-block items-center justify-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400 hover:bg-amber-500 border border-amber-400 hover:border-amber-500 text-white font-semibold">{t('signup')}</Link>
-            </li>
             <li className="inline ps-1 mb-0">
               <LanguageSwitcher />
             </li>

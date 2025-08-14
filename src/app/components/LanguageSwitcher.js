@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
     <select 
       value={currentLocale} 
       onChange={handleChange}
-      className="py-1 px-2 text-sm text-slate-900 dark:text-white bg-transparent border border-slate-300 dark:border-slate-700 rounded-md focus:outline-none"
+      className="py-[6px] px-4 inline-block items-center justify-center tracking-wider align-middle duration-500 text-sm text-center rounded bg-amber-400 hover:bg-amber-500 border border-amber-400 hover:border-amber-500 text-white font-semibold"
     >
       {i18n.locales.map((loc) => (
         <option key={loc} value={loc} className="text-slate-900 dark:text-white">
