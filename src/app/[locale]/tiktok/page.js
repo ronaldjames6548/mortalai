@@ -1,6 +1,6 @@
 
 // src/app/tiktok/page.js
-import TikTokInput from "../components/TikTokInput";
+import TikTokInput from "../../components/TikTokInput";
 
 export default function TikTokPage() {
   return (
