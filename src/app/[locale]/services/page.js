@@ -3,14 +3,14 @@ import React,{useEffect} from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const NavLight = dynamic(()=>import('../components/navlight'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
-const AboutThree = dynamic(() => import('../components/aboutThree'))
-const Features = dynamic(() => import('../components/features'))
+const NavLight = dynamic(()=>import('../../components/navlight'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
+const AboutThree = dynamic(() => import('../../components/aboutThree'))
+const Features = dynamic(() => import('../../components/features'))
 
 
-import {FiFileText, FiVideo, FiPauseCircle, FiCamera, FiLayout,FiMessageCircle, FiHexagon} from '../assets/icons/vander'
+import {FiFileText, FiVideo, FiPauseCircle, FiCamera, FiLayout,FiMessageCircle, FiHexagon} from '../../assets/icons/vander'
 
 export default function Services(){
     useEffect(() => {
