@@ -1,25 +1,25 @@
-// src/app/[locale]/page.js
+// src/app/page.js
 'use client';
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import TikTokInput from '../components/TikTokInput'; // Corrected path
+import TikTokInput from './components/TikTokInput'; // Fixed path
 import { useTranslations, useLocale } from 'next-intl';
 import { TypeAnimation } from 'react-type-animation';
 
-const Navbar = dynamic(() => import('../components/navbar'));
-const BrandLogo = dynamic(() => import('../components/brandLogo'));
-const Features = dynamic(() => import('../components/features'));
-const AboutOne = dynamic(() => import('../components/aboutOne'));
-const AboutTwo = dynamic(() => import('../components/aboutTwo'));
-const AmazingFeatures = dynamic(() => import('../components/amazingFeatures'));
-const AboutThree = dynamic(() => import('../components/aboutThree'));
-const Pricing = dynamic(() => import('../components/pricing'));
-const Faq = dynamic(() => import('../components/Faq'));
-const Blogs = dynamic(() => import('../components/blogs'));
-const Footer = dynamic(() => import('../components/footer'));
+const Navbar = dynamic(() => import('./components/navbar'));
+const BrandLogo = dynamic(() => import('./components/brandLogo'));
+const Features = dynamic(() => import('./components/features'));
+const AboutOne = dynamic(() => import('./components/aboutOne'));
+const AboutTwo = dynamic(() => import('./components/aboutTwo'));
+const AmazingFeatures = dynamic(() => import('./components/amazingFeatures'));
+const AboutThree = dynamic(() => import('./components/aboutThree'));
+const Pricing = dynamic(() => import('./components/pricing'));
+const Faq = dynamic(() => import('./components/Faq'));
+const Blogs = dynamic(() => import('./components/blogs'));
+const Footer = dynamic(() => import('./components/footer'));
 
 export default function Index() {
   const t = useTranslations('home');
