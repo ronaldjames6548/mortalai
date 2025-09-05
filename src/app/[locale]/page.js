@@ -4,23 +4,23 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import TikTokInput from '../../components/TikTokInput';
+import TikTokInput from '../components/TikTokInput';
 import { useTranslations, useLocale } from 'next-intl';
 import { TypeAnimation } from 'react-type-animation';
 
-const Navbar = dynamic(() => import('../../components/navbar'));
-const BrandLogo = dynamic(() => import('../../components/brandLogo'));
-const Features = dynamic(() => import('../../components/features'));
-const AboutOne = dynamic(() => import('../../components/aboutOne'));
-const AboutTwo = dynamic(() => import('../../components/aboutTwo'));
-const ClientsTwo = dynamic(() => import('../../components/clientTwo'));
+const Navbar = dynamic(() => import('../components/navbar'));
+const BrandLogo = dynamic(() => import('../components/brandLogo'));
+const Features = dynamic(() => import('../components/features'));
+const AboutOne = dynamic(() => import('../components/aboutOne'));
+const AboutTwo = dynamic(() => import('../components/aboutTwo'));
+const ClientsTwo = dynamic(() => import('../components/clientTwo'));
 
-const AmazingFeatures = dynamic(() => import('../../components/amazingFeatures'));
-const AboutThree = dynamic(() => import('../../components/aboutThree'));
-const Pricing = dynamic(() => import('../../components/pricing'));
-const Faq = dynamic(() => import('../../components/Faq'));
-const Blogs = dynamic(() => import('../../components/blogs'));
-const Footer = dynamic(() => import('../../components/footer'));
+const AmazingFeatures = dynamic(() => import('../components/amazingFeatures'));
+const AboutThree = dynamic(() => import('../components/aboutThree'));
+const Pricing = dynamic(() => import('../components/pricing'));
+const Faq = dynamic(() => import('../components/Faq'));
+const Blogs = dynamic(() => import('../components/blogs'));
+const Footer = dynamic(() => import('../components/footer'));
 
 export default function Index() {
   const t = useTranslations('home');
@@ -99,7 +99,7 @@ export default function Index() {
           </div>
           <Pricing />
         </div>
-        <ClientsTwo/>
+		<ClientsTwo/>
         <Faq />
         <Blogs />
       </section>
