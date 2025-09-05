@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const Switcher = dynamic(() => import('../components/switcher'))
+const Switcher = dynamic(() => import('../../components/switcher'))
 
 export default function Error(){
     return(
