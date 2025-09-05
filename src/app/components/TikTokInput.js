@@ -2,6 +2,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -77,7 +79,7 @@ const TikTokInput = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 002 2h2a2 2 0 002-2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
                   />
                 </svg>
                 Paste
@@ -155,9 +157,11 @@ const TikTokInput = () => {
                 <div className="md:w-2/3 flex flex-col justify-between">
                   <div className="mb-3">
                     <div className="flex items-center gap-3 justify-between mb-1">
-                      <img
+                      <Image
                         src={data.result.author.avatar || ""}
                         alt={data.result.author.nickname || ""}
+                        width={96}
+                        height={96}
                         className="rounded-full w-24 h-24"
                       />
                       <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -252,12 +256,12 @@ const TikTokInput = () => {
                         Download (With Watermark)
                       </a>
                     )}
-                    <a
+                    <Link
                       href="/tiktok"
                       className="download-button bg-gradient-green hover:bg-gradient-green text-white px-4 py-2 rounded-lg flex items-center"
                     >
                       Download Another Video
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
