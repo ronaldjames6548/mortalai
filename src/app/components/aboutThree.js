@@ -63,7 +63,7 @@ export default function AboutThree() {
 
                     <div className="">
                         <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Turn text into high-quality <br /> voiceovers with one click</h3>
-                        <p className="text-slate-400 max-w-xl">Usually, our colleagues don't jump in the air when they hear e-learning, but the AI videos created with Mortal.Ai have sparked motivation that we haven't seen before.</p>
+                        <p className="text-slate-400 max-w-xl">Usually, our colleagues don&apos;t jump in the air when they hear e-learning, but the AI videos created with Mortal.Ai have sparked motivation that we haven&apos;t seen before.</p>
 
                         <ul className="list-none text-slate-400 mt-4">
                             <li className="mb-2 flex items-center"><FiCheckCircle className="text-amber-400 h-5 w-5 me-2" /> Digital Marketing Solutions for Tomorrow</li>
