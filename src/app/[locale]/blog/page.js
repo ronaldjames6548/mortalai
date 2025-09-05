@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const NavLight = dynamic(()=>import('../components/navlight'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
+const NavLight = dynamic(()=>import('../../components/navlight'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
 
-import { blogData } from "../data/data";
-import {FiClock, FiCalendar} from '../assets/icons/vander'
+import { blogData } from "../../data/data";
+import {FiClock, FiCalendar} from '../../assets/icons/vander'
 
 export default function Blog(){
     useEffect(() => {
