@@ -3,12 +3,12 @@ import React,{useEffect} from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const NavLight = dynamic(()=>import('../components/navlight'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
-const AboutThree = dynamic(() => import('../components/aboutThree'))
-const ClientsTwo = dynamic(() => import('../components/clientTwo'))
-const Pricing = dynamic(() => import('../components/pricing'))
+const NavLight = dynamic(()=>import('../../components/navlight'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
+const AboutThree = dynamic(() => import('../../components/aboutThree'))
+const ClientsTwo = dynamic(() => import('../../components/clientTwo'))
+const Pricing = dynamic(() => import('../../components/pricing'))
 
 export default function Pricings(){
     useEffect(() => {
