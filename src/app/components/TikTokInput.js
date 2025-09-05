@@ -1,7 +1,7 @@
 // src/app/components/TikTokInput.js
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { toast, ToastContainer } from "react-toastify";
@@ -11,6 +11,11 @@ const TikTokInput = () => {
   const [url, setUrl] = useState("");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const fetchData = async () => {
     if (!url) {
@@ -32,6 +37,11 @@ const TikTokInput = () => {
   };
 
   const handlePaste = async () => {
+    if (!isClient || !navigator.clipboard) {
+      toast.error("Clipboard access not available", { position: "bottom-center", autoClose: 3000 });
+      return;
+    }
+
     try {
       const text = await navigator.clipboard.readText();
       setUrl(text);
@@ -40,6 +50,7 @@ const TikTokInput = () => {
       toast.error("Clipboard access denied", { position: "bottom-center", autoClose: 3000 });
     }
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
