@@ -3,11 +3,11 @@ import React, { useState,useEffect } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const NavLight = dynamic(()=>import('../components/navlight'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
+const NavLight = dynamic(()=>import('../../components/navlight'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
 
-import {FiHelpCircle, FiBookmark, FiSettings, FiHexagon,MdKeyboardArrowDown} from '../assets/icons/vander'
+import {FiHelpCircle, FiBookmark, FiSettings, FiHexagon,MdKeyboardArrowDown} from '../../assets/icons/vander'
 
 export default function Helpcenter(){
     useEffect(() => {
