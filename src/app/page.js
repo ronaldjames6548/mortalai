@@ -4,10 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { useTranslations, useLocale } from 'next-intl';
-
-// Dynamically import client components with ssr: false
-const TikTokInput = dynamic(() => import('./components/TikTokInput'), { ssr: false });
-const TypeAnimation = dynamic(() => import('react-type-animation').then(mod => ({ default: mod.TypeAnimation })), { ssr: false });
+import { ClientTikTokInput, ClientTypeAnimation } from './components/ClientWrapper';
 
 const Navbar = dynamic(() => import('./components/navbar'));
 const BrandLogo = dynamic(() => import('./components/brandLogo'));
@@ -34,7 +31,7 @@ export default function Index() {
             <div className="">
               <h4 className="font-bold lg:leading-normal leading-normal text-4xl lg:text-6xl mb-5">
                 {t('aiContentPlatformFor')}
-                <TypeAnimation
+                <ClientTypeAnimation
                   sequence={[
                     t('videos'),
                     1000,
@@ -50,7 +47,7 @@ export default function Index() {
                 />
               </h4>
               <p className="text-slate-400 dark:text-white/60 text-lg max-w-xl mx-auto">{t('description')}</p>
-              <TikTokInput />
+              <ClientTikTokInput />
               <div className="mt-6">
                 <Link
                   href={`/${locale}/signup`}
