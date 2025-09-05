@@ -4,12 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const Navbar = dynamic(()=>import('../components/navbar'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
+const Navbar = dynamic(()=>import('../../components/navbar'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
 
-
-import {FiHeart,FiMessageCircle, FiUser,FiMail} from '../assets/icons/vander'
+import {FiHeart,FiMessageCircle, FiUser,FiMail} from '../../assets/icons/vander'
 
 export default function BlogDetails(){
     useEffect(() => {
