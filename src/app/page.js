@@ -1,13 +1,13 @@
 // src/app/page.js
-'use client';
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import TikTokInput from './components/TikTokInput'; // Fixed path
 import { useTranslations, useLocale } from 'next-intl';
-import { TypeAnimation } from 'react-type-animation';
+
+// Dynamically import client components with ssr: false
+const TikTokInput = dynamic(() => import('./components/TikTokInput'), { ssr: false });
+const TypeAnimation = dynamic(() => import('react-type-animation').then(mod => ({ default: mod.TypeAnimation })), { ssr: false });
 
 const Navbar = dynamic(() => import('./components/navbar'));
 const BrandLogo = dynamic(() => import('./components/brandLogo'));
@@ -23,7 +23,7 @@ const Footer = dynamic(() => import('./components/footer'));
 
 export default function Index() {
   const t = useTranslations('home');
-  const locale = useLocale(); // Get current locale for Link href
+  const locale = useLocale();
 
   return (
     <>
