@@ -3,9 +3,9 @@ import React,{useEffect} from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
-const NavLight = dynamic(()=>import('../components/navbar'))
-const Footer = dynamic(() => import('../components/footer'))
-const Switcher = dynamic(() => import('../components/switcher'))
+const NavLight = dynamic(()=>import('../../components/navbar'))
+const Footer = dynamic(() => import('../../components/footer'))
+const Switcher = dynamic(() => import('../../components/switcher'))
 
 export default function Privacy(){
     useEffect(() => {
