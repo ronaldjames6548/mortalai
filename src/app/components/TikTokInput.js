@@ -351,88 +351,126 @@ const TikTokInput = () => {
       <ToastContainer />
 
       {/* Enhanced Input Form Section */}
-      <div className="max-w-6xl mx-auto">
-        <div className="download-box rounded-2xl">
-          <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-xl backdrop-blur-md p-4 border border-white/10">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+          {/* Header */}
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4">
+            <h2 className="text-white text-lg font-semibold flex items-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+              TikTok Video Downloader
+            </h2>
+            <p className="text-blue-100 text-sm mt-1">
+              Paste any TikTok link or shared content below
+            </p>
+          </div>
+
+          {/* Form Content */}
+          <div className="p-6">
             <form
-              className="flex flex-col md:flex-row items-stretch md:items-center gap-2"
+              className="space-y-4"
               onSubmit={handleSubmit}
             >
-              <div className="relative flex-grow">
-                <input
-                  type="text"
-                  value={url}
-                  onChange={handleInputChange}
-                  placeholder="Paste TikTok video link or shared content here (we'll extract the URL automatically)"
-                  className="w-full h-14 border-gray-300 text-black rounded-xl px-5 pr-20 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 bg-white"
-                />
+              {/* Input Field */}
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  TikTok Video URL
+                </label>
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={url}
+                    onChange={handleInputChange}
+                    placeholder="https://www.tiktok.com/@username/video/123456789 or paste shared content"
+                    className="w-full h-12 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg px-4 pr-16 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-800 transition-all duration-200 bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400"
+                  />
+                  <button
+                    type="button"
+                    onClick={handlePaste}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-200 px-3 py-1.5 rounded-md transition-all duration-200 flex items-center gap-1.5 text-sm font-medium border border-gray-300 dark:border-gray-500"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      />
+                    </svg>
+                    Paste
+                  </button>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <button
+                  type="submit"
+                  disabled={loading || autoProcessing}
+                  className="flex-1 h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-[1.02] disabled:transform-none disabled:cursor-not-allowed"
+                >
+                  {loading ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                      </svg>
+                      Processing...
+                    </>
+                  ) : autoProcessing ? (
+                    <>
+                      <svg className="animate-pulse h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="3"/>
+                        <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"/>
+                      </svg>
+                      Auto-starting...
+                    </>
+                  ) : (
+                    <>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                      </svg> 
+                      Download Video
+                    </>
+                  )}
+                </button>
+                
                 <button
                   type="button"
-                  onClick={handlePaste}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gray-700/80 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2"
+                  onClick={() => setUrl("")}
+                  className="h-12 px-6 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg border border-gray-300 dark:border-gray-600 transition-all duration-200 flex items-center justify-center gap-2"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 mr-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                    />
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  Paste
+                  Clear
                 </button>
               </div>
-              <button
-                type="submit"
-                disabled={loading || autoProcessing}
-                className="h-14 px-8 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 disabled:from-gray-500 disabled:to-gray-400 text-white font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 disabled:transform-none disabled:cursor-not-allowed"
-              >
-                {loading ? (
-                  <>
-                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-                    </svg>
-                    Processing...
-                  </>
-                ) : autoProcessing ? (
-                  <>
-                    <svg className="animate-pulse h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                      <circle cx="12" cy="12" r="3"/>
-                      <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.5"/>
-                    </svg>
-                    Auto-starting...
-                  </>
-                ) : (
-                  <>
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                    </svg> 
-                    Download
-                  </>
-                )}
-              </button>
             </form>
             
             {/* Auto-processing indicator with cancel option */}
             {autoProcessing && (
-              <div className="mt-3 p-3 bg-blue-100 border border-blue-300 rounded-lg flex items-center justify-between">
-                <div className="flex items-center gap-2 text-blue-700">
-                  <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+              <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg flex items-center justify-between">
+                <div className="flex items-center gap-3 text-blue-700 dark:text-blue-300">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
                   </svg>
-                  <span className="text-sm font-medium">Auto-processing extracted URL...</span>
+                  <div>
+                    <span className="font-medium">Auto-processing extracted URL...</span>
+                    <p className="text-sm text-blue-600 dark:text-blue-400">We detected shared content and extracted the video URL</p>
+                  </div>
                 </div>
                 <button 
                   onClick={cancelAutoProcessing}
-                  className="text-blue-600 hover:text-blue-800 text-sm underline transition-colors"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 font-medium px-3 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-800/50 transition-colors"
                 >
                   Cancel
                 </button>
@@ -440,21 +478,31 @@ const TikTokInput = () => {
             )}
           </div>
           
-          {/* URL Format Help */}
-          <div className="mt-3 text-xs text-slate-500 dark:text-slate-400">
-            <p>
-              {autoProcessing ? (
-                <span className="flex items-center gap-1">
-                  <svg className="animate-spin h-3 w-3" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
-                  </svg>
-                  Auto-processing TikTok Lite shared content...
-                </span>
-              ) : (
-                "Supported: Direct TikTok URLs, TikTok Lite shared content, vm.tiktok.com, m.tiktok.com - we'll extract the video URL automatically!"
-              )}
-            </p>
+          {/* Help Text */}
+          <div className="bg-gray-50 dark:bg-gray-900 px-6 py-4 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+              <svg className="w-4 h-4 mt-0.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+              <div>
+                {autoProcessing ? (
+                  <span className="flex items-center gap-1">
+                    <svg className="animate-spin h-3 w-3" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+                    </svg>
+                    Auto-processing TikTok shared content...
+                  </span>
+                ) : (
+                  <>
+                    <strong className="text-gray-900 dark:text-gray-200">Supported formats:</strong>
+                    <span className="ml-1">Direct TikTok URLs, TikTok shared content, vm.tiktok.com, m.tiktok.com links</span>
+                    <br />
+                    <span>We automatically extract video URLs from shared content!</span>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
