@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Background Gradients */
+body {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+/* Enhanced gradient backgrounds for sections */
+.hero-section {
+  background: linear-gradient(135deg, 
+    rgba(15, 15, 35, 0.95) 0%, 
+    rgba(26, 26, 46, 0.9) 50%, 
+    rgba(22, 33, 62, 0.95) 100%
+  );
+}
+
+/* TikTok Input Form Enhancements */
+.download-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced gradient buttons */
+.bg-gradient-pink-purple {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+}
+
+.hover\:bg-gradient-pink-purple:hover {
+  background: linear-gradient(135deg, #db2777 0%, #7c3aed 100%);
+}
+
+.bg-gradient-blue-purple {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 15, 35, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #db2777, #7c3aed);
+}
+
+/* Enhanced animations */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading spinner enhancements */
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid #ec4899;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast notification styling */
+.Toastify__toast {
+  background: rgba(15, 15, 35, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.Toastify__toast--success {
+  background: rgba(34, 197, 94, 0.9) !important;
+}
+
+.Toastify__toast--error {
+  background: rgba(239, 68, 68, 0.9) !important;
+}
+
+.Toastify__toast--info {
+  background: rgba(59, 130, 246, 0.9) !important;
+}
+
+/* Video player enhancements */
+video {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Download button enhancements */
+.download-button {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Form input enhancements */
+.form-input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+/* Dark mode text adjustments */
+.dark .text-gray-900 {
+  color: rgb(243 244 246) !important;
+}
+
+.dark .text-gray-600 {
+  color: rgb(156 163 175) !important;
+}
+
+.dark .text-gray-400 {
+  color: rgb(107 114 128) !important;
+}
+
+/* Enhanced navbar styling */
+.nav-sticky {
+  background: rgba(15, 15, 35, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Section background enhancements */
+section {
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(15, 15, 35, 0.02) 0%, 
+    rgba(26, 26, 46, 0.05) 50%, 
+    rgba(22, 33, 62, 0.02) 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Auto-processing indicator styling */
+.auto-processing-indicator {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  border: 1px solid #93c5fd;
+  animation: pulse 2s infinite;
+}
+
+/* Error message styling */
+.error-message {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+}
+
+/* Success message styling */
+.success-message {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 1px solid #86efac;
+  color: #16a34a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .download-box {
+    margin: 0 16px;
+  }
+  
+  .glass-card {
+    margin: 0 16px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible improvements */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
